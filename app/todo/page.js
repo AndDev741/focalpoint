@@ -5,7 +5,7 @@ import TodoDiv from '../[ components ]/todoDiv';
 import TodoDivChecked from '../[ components ]/todoDivChecked';
 import AddTodo from "../[ components ]/addTodo";
 import DeleteTodo from "../[ components ]/deleteTodo";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Todo() {
   const [task, setTask] = useState('');
@@ -13,7 +13,14 @@ export default function Todo() {
   const [completedTasks, setCompletedTasks] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
   const [onDelete, setOnDelete] = useState(false);
-  const name = typeof window !== 'undefined' ? localStorage.getItem('name') : null;
+  const [name, setName] = useState('')
+  useEffect(() => {
+    // Check if running on the client side
+    if (typeof window !== 'undefined') {
+      const storedName = localStorage.getItem('name');
+      setName(storedName || ''); // Set to an empty string if localStorage item is null
+    }
+  }, []);
 
   const markAsCompleted = (index) => {
     const taskToMark = tasks[index];
