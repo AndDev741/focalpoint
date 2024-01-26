@@ -1,3 +1,4 @@
+'use client';
 import Image from "next/image";
 import DateComponent from './date';
 import styles from "./header.module.css";

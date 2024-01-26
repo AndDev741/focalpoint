@@ -13,7 +13,7 @@ export default function Todo() {
   const [completedTasks, setCompletedTasks] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
   const [onDelete, setOnDelete] = useState(false);
-  const name = localStorage.getItem('name');
+  const name = typeof window !== 'undefined' ? localStorage.getItem('name') : null;
 
   const markAsCompleted = (index) => {
     const taskToMark = tasks[index];
