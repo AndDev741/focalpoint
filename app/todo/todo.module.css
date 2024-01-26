@@ -1,0 +1,139 @@
+@media only screen and (min-width: 900px){
+    .main{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+    }
+    
+    .todo{
+        display: flex;
+        width: 450px;
+        padding: 32px;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 24px;
+        margin-top: 24px;
+        border-radius: 16px;
+        border-radius: 16px;
+        border: 1px solid #EAECF0;
+        background: #FFF;
+        box-shadow: 0px 0px 0px 1px #F4EBFF, 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+        min-height: 400px;
+    }
+
+    .todo h4{
+        font-weight: 500;
+        font-size: 20px;
+        margin-top: 8px;
+        color: rgba(0, 0, 0, 0.54);
+    }
+
+    .main button{
+        color: white;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: 500;
+        display: flex;
+        padding: 16px 24px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        align-self: stretch; 
+        margin-top: 32px;
+        width: 450px;
+        border: none;
+        border-radius: 8px;
+        background: linear-gradient(90deg, #0796D3 0%, #53C0F0 68.65%);
+        margin-bottom: 32px;
+      }
+    
+    .hiddeModal{
+        display: none;
+    }
+    
+    .showModal{
+        display: block;
+        position: fixed;
+        top: 1px;
+        left: 1px;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(2px);
+        z-index: 999; 
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .main{
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+    
+    .todo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 24px;
+        margin-top: 24px;
+        border-radius: 16px;
+        border: 1px solid #EAECF0;
+        width: 100%;
+        min-height: 400px;
+    }
+    
+    .todo h4{
+        font-weight: 500;
+        font-size: 20px;
+        margin-top: 8px;
+        color: rgba(0, 0, 0, 0.54);
+    }
+    
+    .finalizadas{
+        margin-top: 24px;
+    }
+    
+    .main button{
+        color: white;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: 500;
+        display: flex;
+        padding: 16px 24px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        align-self: stretch; 
+        margin-top: 32px;
+        width: 100%;
+        border: none;
+        border-radius: 8px;
+        background: linear-gradient(90deg, #0796D3 0%, #53C0F0 68.65%);
+        margin-bottom: 32px;
+      }
+    
+    .hiddeModal{
+        display: none;
+    }
+    
+    .showModal{
+        display: block;
+        position: fixed;
+        padding: 24px;
+        top: 1px;
+        left: 1px;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        /*Desktop:
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(5px);  */
+        z-index: 999; 
+    }
+}
+
+

@@ -1,95 +1,80 @@
-import Image from "next/image";
+'use client'
+
+import Head from 'next/head';
+import Image from 'next/image';
+import { useRouter } from 'next/navigation';
+import { useState } from 'react';
+import DateComponent from './[ components ]/date';
 import styles from "./page.module.css";
 
 export default function Home() {
+  const router = useRouter();
+  const [name, setName] = useState('');
+  const [error, setError] = useState('');
+
+  const handleName = (e) => {
+    setName(e.target.value);
+  };
+
+  const handleEnter = () => {
+    if (name.length === 0) {
+      setError("Por favor insira seu nome");
+    } else {
+      localStorage.setItem('name', name);
+      router.push('/todo');
+    }
+  };
+
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      handleEnter();
+    }
+  };
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
+    <div>
+      <Head>
+        <link rel="icon" href='/favicon.ico'/>
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com"/>
+        <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+      </Head>
+
+      <div className={styles.body}>
+        <header className={styles.header}>
+          <div className={styles.icon}>
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
+              alt='Logo focalpoint' 
+              src="/focalpointIcon.png"
+              width={40}
+              height={40}
             />
-          </a>
-        </div>
+            <div className={styles.logotype}>
+              <Image
+                alt='Frase da logo focalpoint'
+                src="/Logotype.svg"
+                width={135}
+                height={20}
+              />
+            </div>
+          </div>
+          <h4>Olá, seja bem vindo ao FocalPoint</h4>
+          <DateComponent/>
+        </header>
+        <div className={styles.border}></div>
+        <main className={styles.main}>
+          <label><h2>Qual o seu nome?</h2></label>
+          <input
+            value={name}
+            onChange={handleName}
+            onKeyDown={handleKeyPress}
+            placeholder="Seu nome"
+            type={'text'}
+          />
+          <button onClick={handleEnter}>Entrar no FocalPoint</button>
+          <p className={styles.error}>{error}</p>
+        </main>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </div>
   );
 }

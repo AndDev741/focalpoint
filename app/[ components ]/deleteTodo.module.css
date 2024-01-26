@@ -1,0 +1,155 @@
+@media only screen and (min-width: 900px) {
+    .container{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        width: 450px;
+        padding: 32px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        background-color: #FFF;
+        gap: 32px; 
+        border-radius: 16px;
+        box-shadow: 0px 24px 48px -12px rgba(16, 24, 40, 0.18);
+    }
+    
+    .container h2{
+        font-size: 26px;
+        letter-spacing: -0.48px;
+        font-weight: 500;
+    }
+    
+    .confirm p{
+        color: rgba(0, 0, 0, 0.54); 
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: -0.32px;
+    }
+
+    .buttons{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+        margin-top: 32px;
+    }
+    
+    
+    .delete{
+        color: white;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: 500;
+        display: flex;
+        padding: 16px 24px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        align-self: stretch; 
+        width: 100%;
+        border-radius: 8px;
+        border: none;
+        background: linear-gradient(90deg, #D30707 0%, #F05353 68.65%);
+        margin-left: 8px;
+    
+      }
+      
+    .delete:hover{
+        background: linear-gradient(90deg, #F05353 0%, #D30707 68.65%);
+    }
+    
+    .cancel{
+        color: black;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: 500;
+        display: flex;
+        padding: 16px 24px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        align-self: stretch; 
+        width: 100%;
+        border-radius: 8px;
+        border: none;
+        background: #E7EEFB; 
+        margin-right: 8px;
+    }
+    
+    .cancel:hover{
+        background: #d6dbe6
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .container h2{
+        font-size: 26px;
+        letter-spacing: -0.48px;
+        font-weight: 500;
+    }
+    
+    .confirm{
+        margin-top: 32px;
+    }
+    
+    .confirm p{
+        color: rgba(0, 0, 0, 0.54); 
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: -0.32px;
+    }
+    
+    
+    .delete{
+        color: white;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: 500;
+        display: flex;
+        padding: 16px 24px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        align-self: stretch; 
+        margin-top: 32px;
+        width: 100%;
+        border-radius: 8px;
+        border: none;
+        background: linear-gradient(90deg, #D30707 0%, #F05353 68.65%);
+    
+      }
+      
+    .delete:hover{
+        background: linear-gradient(90deg, #F05353 0%, #D30707 68.65%);
+    }
+    
+    .cancel{
+        color: black;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: 500;
+        display: flex;
+        padding: 16px 24px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        align-self: stretch; 
+        margin-top: 16px;
+        width: 100%;
+        border-radius: 8px;
+        border: none;
+        background: #E7EEFB; 
+    }
+    
+    .cancel:hover{
+        background: #d6dbe6
+    }
+}
+
