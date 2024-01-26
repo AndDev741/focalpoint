@@ -1,36 +1,25 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">FocalPoint, todo list minimalista</h1>
+<br/>
+<p align="center">Um projeto desafiador em NextJS que está estruturado da seguinte Maneira:</p>
+<br/>
+<ul>
+  <li>/App - Todo o aplicativo em si</li>
+  <li>/[components] - Componentes criados para a página principal</li>
+  <ul>
+    <li>addTodo.js - Componente para adicionar as tarefas</li>
+    <li>date.js - Componente para pegar a data do cliente</li>
+    <li>deleteTodo.js - Componente deletar as tarefas</li>
+    <li>header.js - Componente do header da página todo</li>
+    <li>todoDiv.js - Componente onde cada tarefa é renderizada</li>
+    <li>todoDivChecked.js - Componente onde cada tarefa completa é renderizada</li>
+  </ul>
+  <li>/todo</li>
+  <ul>
+    <li>page.js - Onde todos os componentes são renderizados para criar a página principal da todo-list</li>
+  </ul>
+  <li>layout.js - Componente para um layout fixo entre todas as páginas</li>
+  <li>page.js - Página inicial para capturar o nome do usuário</li>
+</ul>
 
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<p>Todo o projeto está responsivo, porém apresentando pequeno bugs que ainda não foram resolvidos</p>
+<p>Feito com amor por André Luiz, web developer</p>
